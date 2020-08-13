@@ -76,12 +76,243 @@ from random import *
 # print("Red\tApple")
 
 
-add = "http://naver.com"
-add1 = add[7:12]
-print(add1)
-add2 = len(add1)
-add3 = add1.count('e')
-print('{}{}{}{}'.format(add1,add2,add3,"!"))
+# add = "http://naver.com"
+# add1 = add[7:12]
+# print(add1)
+# add2 = len(add1)
+# add3 = add1.count('e')
+# print('{}{}{}{}'.format(add1,add2,add3,"!"))
+
+# subway = [10, 20, 30]
+# print(subway)
+
+# subway = ['유재석', '조세호', '박명수']
+# print(subway)
+
+# print(subway.index("조세호"))
+
+# # 맨 뒤에 추가
+# subway.append("하하")
+# print(subway)
+
+# # 위치 지정 후 추가
+# subway.insert(1, "정형돈")
+# print(subway)
+
+# # 지하철에 있는 사람을 한 명씩 뒤에서 꺼냄
+# print(subway.pop())
+# print(subway.pop())
+# print(subway.pop())
+
+# print(subway)
+
+# subway.append("유재석")
+# print(subway.count("유재석"))
+
+# # asc 정렬
+# num_list = [5,2,4,3,1]
+# num_list.sort()
+# print(num_list)
+
+# # 뒤집기
+# num_list.reverse()
+# print(num_list)
+
+# # 모두 지우기
+# num_list.clear()
+# print(num_list)
+
+# 다양한 자료형 함께 사용 가능
+# num_list = [5,4,3,2,1]
+# mix_list = ["조세호", 20, True]
+# num_list.extend(mix_list) # 리스트 합침
+# print(num_list)
+
+
+# cabinet = {3:"유재석", 100:"김태호"}
+# # print(cabinet[3])
+
+
+# # print(cabinet.get(3))
+
+# # # print(cabinet[5]) # 없으므로 프로그램 종료됨
+# # print(cabinet.get(5, "사용 가능"))
+
+# # print(3 in cabinet) # true
+# # print(5 in cabinet) # false
+
+# # # 사전에 키 추가
+# # cabinet["c-20"] = "조세호"
+# # print(cabinet["c-20"])
+
+# # del cabinet["c-20"]
+# # print(cabinet)
+
+# print(cabinet.keys())
+# print(cabinet.values())
+# print(cabinet.items()) # key, value 쌍으로 출력
+# print(cabinet)
+
+# cabinet.clear()
+# print(cabinet)
+
+
+# menu = ("돈가스", "치즈까스") # 튜플은 add 안됨
+# menu.add('생선까스')
+# print(menu[0])
+# print(menu[1])
+
+# (name, age, hobby) = ("김종국", 20, "코딩")
+# print(name, age, hobby)
+
+# my_set = {1,2,3,3,3} # 집합(set)은 중복 안됨
+# print(my_set)
+
+# java = {"유재석", "김태호", "양세형"}
+# python = set(['유재석', '박명수'])
+
+# # 교집합
+# print(java & python)
+# print(java.intersection(python))
+
+# # 합집합
+# print(java | python)
+# print(java.union(python))
+
+# # 차집합
+# print(java - python)
+# print(java.difference(python))
+
+# python.add("김태호")
+# print(python)
+# python.remove("유재석")
+
+
+#자료구조의 변경
+# menu = {"커피", "우유", "주스"}
+# print(menu, type(menu))
+
+# menu = list(menu)
+# print(menu, type(menu))
+
+# menu = tuple(menu)
+# print(menu, type(menu))
+
+# menu = set(menu)
+# print(menu, type(menu))
+
+# import random
+# list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+
+# samplelist = random.sample(list, 4)
+# samplelist2 = samplelist.pop()
+
+# print(samplelist2, samplelist)
+
+# weather = input("오늘 날씨는 어때요? ")
+# if weather == "비" or weather == "눈":
+#     print("우산을 챙기세요")
+# elif weather == '미세먼지':
+#     print("마스크를 챙기세요")
+# else:
+#     print("준비물 없음")
+
+# temp = int(input("기온은 어때요? "))
+# if 30 <= temp:
+#     print("개더움")
+# elif 10 <= temp and temp < 30:
+#     print("ㄱㅊ")
+# elif 0 <= temp < 10:
+#     print("개춥")
+# else:
+#     print("ㅈㄴ 추움")
+
+# for waiting_no in range(1, 6):
+#     print("대기번호 : {}".format(waiting_no))
+
+# starbucks = ["iron", "tor", "grout"]
+# for customer in starbucks:
+#     print("{}, 커피가 준비되었습니다".format(customer))
+
+# customer = "토르"
+# index = 5
+# while index >= 1:
+#     print("{}, 커피가 준비 되었습니다 {}번 남았어요".format(customer, index))
+#     index -= 1
+#     if index == 0:
+#         print("커피가 폐기되었습니다")
+
+
+
+# customer = "아이언맨"
+# index = 1
+# while True:
+#     print("{}, 커피가 준비 되었습니다 {}번 불렀어요".format(customer, index))
+#     index += 1
+    
+
+# customer = "토르"
+# person = "unknown"
+
+# while person != customer:
+#     print("{}, 커피가 준비되었습니다".format(customer))
+#     person = input("이름이 어떻게 되세요?")
+
+
+# absent = [2, 5]
+# no_book = [7]
+# for student in range(1, 11):
+#     if student in absent:
+#         continue
+#     elif student in no_book:
+#         print("수업 끝, {}는 교무실로 따라와".format(student))
+#         break
+#     print("{}, 책 읽어".format(student))
+
+# students = [1,2,3,4,5]
+# print(students)
+# students = [i+100 for i in students]
+# print(students)
+
+students = ['Iron man', 'thor', 'groot']
+students = [len(i) for i in students]
+print(students)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
