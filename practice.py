@@ -275,44 +275,126 @@ from random import *
 # students = [i+100 for i in students]
 # print(students)
 
-students = ['Iron man', 'thor', 'groot']
-students = [len(i) for i in students]
-print(students)
+# students = ['Iron man', 'thor', 'groot']
+# students = [len(i) for i in students]
+# print(students)
+
+
+# students = ['Iron man', 'thor', 'groot']
+# students = [i.upper() for i in students]
+# print(students)
+
+# import random
+
+# p = 0
+# for i in range(1, 51):
+#     j = random.randrange(5, 51)
+#     if(5 <= j <= 15):
+#         p += 1
+#         print('[0] {}번째 손님 (소요시간 : {}분)'.format(i, j))
+#     else:
+#         print('{}번째 손님 (소요시간 : {}분)'.format(i, j))
+    
+# print('총 탑승 승객 : %d 분' % (p))
+# #     # if 5 <= j <= 15:
+# #     #     print("총 탑승 승객: ")
+
+
+
+# def open_account():
+#     print('계좌 생성 완료')
+  
+# # def close_account():
+# #     print('계좌 삭제 완료')
+
+
+# def deposit(balance, money):
+#     print('입금이 완료되었습니다. 잔액은 {} 원입니다'.format(balance + money))
+#     return balance + money
+
+# def withdraw(balance, money):
+#     if balance >= money:
+#         print("출금이 완료되었습니다. 잔액은 {}원입니다.".format(balance - moeny))
+#         return balance - money
+#     else:
+#         print('출금이 완료되지 않았습니다. 잔액은 {} 원입ㄴ디ㅏ'.format(balance))
+#         return balance
+
+# def withdraw_night(balance, money):
+#     commission = 100
+#     return commission, balance - money - commission
+
+
+# balance = 0
+# balance = deposit(balance, 1000)
+# # balance = withdraw(balance, 2000)
+# commission, balance = withdraw_night(balance, 500)
+# print("수수료 {}원이며, 잔액은 {}원입니다".format(commission, balance))
+# print(balance)
 
 
 
 
+# def profile(name, age, main_lang):
+#     print("이름 : {}\t나이 : {}\t주 사용 언어: {}"\
+#         .format(name, age, main_lang))
+
+# profile("유재석", 20, "파이썬") 
+# profile("김태호", 25, "자바")       
+
+# def profile(name, age=17, main_lang="python"):
+#     print("이름 : {}\t나이 : {}\t주 사용 언어: {}"\
+#         .format(name, age, main_lang))
+
+# def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+#     print("이름 : {}\t나이 : {}".format(name, age), end=" ")
+#     print(lang1, lang2, lang3, lang4, lang5)
+# profile("유재석", 20, "j", "py", "c", "pyee", "co")
+
+# def profile(name, age, *language):
+#     print("이름 : {}\t나이 : {}".format(name, age), end=" ")
+#     for lang in language:
+#         print(lang, end=" ")
+
+# profile("유재석", 20, "j", "py", "c", "pyee", "co")
+
+# gun = 10
+
+# def checkpoint(soldiers):
+#     global gun
+#     gun -= soldiers
+#     print("남은 총 : {}".format(gun))
+
+# def checkpoint_ret(gun, soldiers):
+#     gun = gun - soldiers
+#     print("[함수 내] 남은 총 : {}".format(gun))
+#     return gun
+
+# print("전체 총 : {}".format(gun))
+# # checkpoint(2)
+# gun = checkpoint_ret(gun, 2)
+# print("남은 총 : {}".format(gun))
 
 
+# def std_weight(height, gender):
+#     if gender == "man":
+#         weight = round(height / 100 * height/ 100 * 22, 2)
+#         print("키 {}cm 남자의 표준 체중은 {}kg 입니다".format(height, weight))
+#     elif gender == "woman":
+#         weight = round(height/10 * height * 21, 2)
+#         print("키 {} 여자의 표준 체중은 {}kg 입니다".format(height, weight))
+
+# std_weight(175, "man")
 
 
+# import sys
+# print("Python", "Java", file = sys.stdout)
+# print("Python", "Java"=, file = sys.stderr)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+scores = {"수학":0, "영어":50, "코딩":100}
+for subject, score in scores.items():
+    # print(subject, score)
+    print(subject.ljust(8), str(score).rjust(4), sep=":")
 
 
 
