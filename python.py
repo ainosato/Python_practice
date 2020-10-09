@@ -1,53 +1,96 @@
-# class BigNumberError(Exception):
-#     def __init__(self, msg):
-#         self.msg = msg
+# import theather_module
+# theather_module.price(3)
+# theather_module.price_mornig(4)
+# theather_module.price_soldier(5)
 
-#     def __str__(self):
-#         return self.msg
+# import theather_module as mv
+# mv.price_soldier(3)
+# mv.price_mornig(5)
+# mv.price(10)
+
+# from theather_module import *
+# price(3)
+# price_mornig(5)
+# price_soldier(3)
+
+# from theather_module import price, price_mornig
+# price(5)
+# price_mornig(10)
+
+# from theather_module import price_soldier as price
+# price(4)
+
+# import traval.tal
+# trip_to = traval.tal.ThailandPackage()
+# trip_to.detail()
+
+# from traval.tal import ThailandPackage
+# trip_to = ThailandPackage()
+# trip_to.detail()
+
+# from traval import vat
+# trip_to = vat.VietnamPackage()
+# trip_to.detail()
+
+# from traval import *
+# trip_to = tal.ThailandPackage()
+# trip_to.detail()
+
+# import inspect
+# import random
+# print(inspect.getfile(random)) #랜덤 모듈의 위치 출력
+# print(inspect.getfile(tal))
 
 
-# try:
-#     print("한 자리 숫자 나누기 전용 계산기입니다")
-#     num1 = int(input("첫 번째 숫자 입력: "))
-#     num2 = int(input("두 번째 숫자 입력: "))
-#     if num1 >= 10 or num2 >= 10:
-#         raise BigNumberError("입력값 : {}, {}".format(num1, num2))
-#     print("{} / {} = {}".format(num1, num2, int(num1/ num2)))
+# dir : 어떤 객체를 넘겨줬을 때 그 객체가 어떤 변수와 함수를 가지고 있는지 표시
+# print(dir())
+# import random # 외장 함수
+# print(dir())
 
-# except ValueError:
-#     print("잘못된 값을 입력함")
-# except BigNumberError as err:
-#     print("에러 발생, 한 자리 숫자만 입력")
-#     print(err)
-# finally:
-#     print("계산기를 이용해 주셔서 감사합니다")
+# import pickle
+# print(dir())
 
-class SoldOutError(Exception):
-    pass
+# print(dir(random))
+
+# lst = [1,2,3]
+# print(dir(lst))
+
+# name = "Lee"
+# print(dir(name))
+
+# glob : 경로 내의 폴더 / 파일 목록 조회 (윈도우 dir)
+# import glob
+# print(glob.glob("*.py")) # 확장자가 py 인 모든 파일
+
+# os : 운영체제에서 제공하는 기본 기능
+# import os
+# print(os.getcwd())
+
+# folder = "sample_dir"
+
+# if os.path.exists(folder):
+#     print("이미 있는 폴더")
+#     os.rmdir(folder)
+#     print(folder, "폴더 삭제")
+# else:
+#     os.makedirs(folder) # 폴더 생성
+#     print(folder, "폴더 생성")
+# print(os.listdir())
+
+# import time
+# print(time.localtime())
+# print(time.strftime("%Y-%m-%d %H:%M:%S"))
+
+# import datetime
+# # print("오늘 날짜는 ", datetime.date.today())
+
+# today = datetime.date.today()
+# td = datetime.timedelta(days=100)
+# print("현재부터 100일 후는", today + td)
+
+import inspect
+import byme
+print(inspect.getfile(byme))
+byme.sign()
 
 
-chicken = 10
-waiting = 1
-while(True):
-    try:
-        print("[남은 치킨 : {}].".format(chicken))
-        order = int(input("치킨 몇 마리 주문하시겠습니까?"))
-        if order > chicken:
-            print("재료 부족")
-        elif order < 1:
-            raise ValueError
-        
-        else:
-            print("[대기번호 {}] {} 마리 주문 완료".format(waiting, order))
-            waiting += 1
-            chicken -= order
-
-        if chicken == 0:
-            raise SoldOutError
-
-    except ValueError:
-        print("잘못된 값을 입력함")
-
-    except SoldOutError:
-        print("재고가 소진되어 더 이상 주문을 받지 않습니다.")
-        break
